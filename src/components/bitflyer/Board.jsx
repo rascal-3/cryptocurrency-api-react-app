@@ -15,18 +15,20 @@ class Board extends Component {
   }
 
   componentDidMount() {
-    request.get('/api/bf/board')
-    .end((err, res) => {
-      if (err) {
-        console.log(err);
-      } else if (res.ok) {
-        // console.log('res: ', res);
-        const body = res.body;
-        this.setState({ mid_price: body.mid_price });
-        this.setState({ bids: body.bids });
-        this.setState({ asks: body.asks });
-      }
-    });
+    setInterval(() => {
+      request.get('/api/bf/board')
+      .end((err, res) => {
+        if (err) {
+          console.log(err);
+        } else if (res.ok) {
+          // console.log('res: ', res);
+          const body = res.body;
+          this.setState({ mid_price: body.mid_price });
+          this.setState({ bids: body.bids });
+          this.setState({ asks: body.asks });
+        }
+      });
+    }, 1000);
   }
 
   render() {
