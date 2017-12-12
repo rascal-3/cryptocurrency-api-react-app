@@ -1,0 +1,32 @@
+body {
+  background-color: white;
+  color: #444;
+  margin: 0; }
+
+ul {
+  margin: 0; }
+
+.app {
+  width: 1000px;
+  margin: 40px auto 0;
+  display: flex; }
+
+.left-navi {
+  list-style-type: none;
+  margin-right: 40px;
+  padding-right: 40px;
+  border-right: 1px solid #ccc; }
+
+.app-title {
+  text-align: center;
+  margin-top: 0; }
+
+.result-area {
+  display: flex; }
+
+.result-right {
+  margin-left: 20px; }
+
+td {
+  margin-left: 10px;
+  vertical-align: top; }
